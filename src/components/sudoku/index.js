@@ -8,9 +8,9 @@ import { DIFFICULTY, STATUS } from './constants';
 
 import './styles.scss';
 
-const Sudoku = () => {
+const createEmptyBoard = () => Array(9).fill(Array(9).fill(0));
 
-  const createEmptyBoard = () => Array(9).fill(Array(9).fill(0));
+const Sudoku = () => {
  
   const [board, setBoard] = useState(createEmptyBoard());
   const [status, setStatus] = useState(STATUS.UNSOLVED);
