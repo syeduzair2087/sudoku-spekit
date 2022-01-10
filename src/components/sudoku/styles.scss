@@ -1,0 +1,81 @@
+.sudoku-container {
+  margin: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  .board-container {
+    margin-bottom: 48px;
+  
+    input {
+      border-radius: 0;
+      border: 1px solid black;
+      width: 48px;
+      height: 48px;
+      text-align: center;
+      font-size: 38px;
+      line-height: 38px;
+  
+      &:focus {
+        outline: none;
+      }
+  
+      &:nth-of-type(3n):not(:last-of-type) {
+        border-right: 2px solid black;
+      }
+    }
+  
+    .ant-row:nth-of-type(3n):not(:last-of-type) {
+      input {
+        border-bottom: 2px solid black;
+      }
+    }
+  }
+
+  .controls-container {
+    .status-container {
+      display: flex;
+      justify-content: space-around;
+      border: 1px solid #d9d9d9;
+      border-radius: 2px;
+      font-size: 20px;
+      padding: 4px 0;
+      margin-bottom: 12px;
+      text-transform: capitalize;
+    }
+
+    .difficulty-controls {
+     & > span {
+       margin-right: 16px;
+       font-size: 20px;
+     }
+  
+     button {
+       margin: 8px;
+       text-transform: capitalize;
+
+       &:last-child {
+        margin-right: 0;
+       }
+     }
+
+     margin-bottom: 12px;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: space-between;
+
+      & > button {
+        flex: 0.5;
+
+        &:first-child {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+}
+
+
